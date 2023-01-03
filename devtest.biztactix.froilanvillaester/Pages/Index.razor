@@ -1,0 +1,98 @@
+﻿@page "/"
+@using Domain.Model
+@using Newtonsoft.Json
+@using Domain.Interface
+@using Newtonsoft.Json.Linq
+@inject IAuthenticateService AuthenticateService
+@inject IProfileService ProfileService
+@inject ProfileViewModel Profile
+
+<h1>Dev Test - BIZTACTIX</h1>
+
+by: Froilan Villaester
+@if (isAuthenticating)
+{
+    <p><em>Loading...</em></p>
+}
+else{
+    @if (string.IsNullOrEmpty(token))
+    {
+        <small>@errorMessage</small>
+    }
+    else{
+        <br/>
+        <small>Authenticated!</small>
+
+        <hr />
+
+        <EditForm Model="Profile" OnValidSubmit="Save">
+            <h5>Profile</h5>
+            <br/>
+            <ProfileEditor Profile="Profile"></ProfileEditor>
+            <br/>
+            <ProfileContactEditor MobilePhone="Profile.mobilePhone" Phone="Profile.phone"></ProfileContactEditor>
+            <br/>
+            <button type="submit" class="btn btn-sm btn-success">
+                Save
+            </button>
+
+            @if (isSaving)
+            {
+                <em>Updating...</em>
+            }
+
+        </EditForm>
+    }
+}
+
+
+@code{
+    private string authResponse;
+    private string token;
+    private ProfileViewModel profile;
+    private string bearerToken;
+    private string errorMessage;
+
+    private bool isAuthenticating = true;
+    private bool isSaving = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isAuthenticating = true;
+
+        var credObj = new LoginModel()
+            {
+                username = "DevTestUser",
+                password = "DevTestPassword"
+            };
+
+        authResponse = await AuthenticateService.Authenticate(JsonConvert.SerializeObject(credObj));
+        isAuthenticating = false;
+
+        if (!string.IsNullOrEmpty(authResponse))
+        {
+            var tokenData = (JObject)JsonConvert.DeserializeObject(authResponse);
+            token = tokenData["token"].Value<string>();
+            bearerToken = "Bearer " + token;
+
+            //load profile
+            profile = await ProfileService.GetProfile(bearerToken);
+            Profile = profile;
+        }
+        else
+            errorMessage = "Error: You are not authenticated.";
+    }
+
+    async Task Save()
+    {
+        isSaving = true;
+        var tokenData = (JObject)JsonConvert.DeserializeObject(authResponse);
+        token = tokenData["token"].Value<string>();
+        bearerToken = "Bearer " + token;
+
+        await ProfileService.UpdateProfile(Profile, bearerToken);
+        isSaving = false;
+
+        await OnInitializedAsync();
+    }
+}

@@ -1,0 +1,50 @@
+﻿@using Domain.Model
+<br/>
+<h5>Contact Numbers</h5>
+<br/>
+<h6>Mobile Phone</h6>
+
+<div class="form-field">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Dialing Country Code:</label>
+            <div>
+                <InputNumber @bind-Value="MobilePhone.dialingCountryCode" />
+                <ValidationMessage For="@(() => MobilePhone.dialingCountryCode)" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label>Phone Number:</label>
+            <div>
+                <InputText @bind-Value="MobilePhone.phoneNumber"/>
+                <ValidationMessage For="@(() => MobilePhone.phoneNumber)" />
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<h6>Phone</h6>
+
+<div class="form-field">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Dialing Country Code:</label>
+            <div>
+                <InputNumber @bind-Value="Phone.dialingCountryCode" />
+                <ValidationMessage For="@(() => Phone.dialingCountryCode)" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label>Phone Number:</label>
+            <div>
+                <InputText @bind-Value="Phone.phoneNumber"/>
+                <ValidationMessage For="@(() => Phone.phoneNumber)" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public ProfileMobilePhoneViewModel MobilePhone { get; set; }
+    [Parameter] public ProfileMobilePhoneViewModel Phone { get; set; }
+}

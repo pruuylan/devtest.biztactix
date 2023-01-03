@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devtest.biztactix.froilanvillaester", "devtest.biztactix.froilanvillaester.csproj", "{197A25B8-F538-4340-83B3-8A694B1BC061}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "..\Domain\Domain.csproj", "{0C76E562-F86C-416C-AABF-0DD613A3AEE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{197A25B8-F538-4340-83B3-8A694B1BC061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197A25B8-F538-4340-83B3-8A694B1BC061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197A25B8-F538-4340-83B3-8A694B1BC061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197A25B8-F538-4340-83B3-8A694B1BC061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C76E562-F86C-416C-AABF-0DD613A3AEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C76E562-F86C-416C-AABF-0DD613A3AEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C76E562-F86C-416C-AABF-0DD613A3AEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C76E562-F86C-416C-AABF-0DD613A3AEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD0A2EB2-0898-461D-BF86-700A3FDE177C}
+	EndGlobalSection
+EndGlobal

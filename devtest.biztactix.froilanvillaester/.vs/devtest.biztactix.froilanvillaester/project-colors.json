@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "197a25b8-f538-4340-83b3-8a694b1bc061": {
+      "ProjectGuid": "197a25b8-f538-4340-83b3-8a694b1bc061",
+      "DisplayName": "devtest.biztactix.froilanvillaester",
+      "ColorIndex": 0
+    },
+    "8cd51bad-e4c5-44d7-8a28-7afd0e21490a": {
+      "ProjectGuid": "8cd51bad-e4c5-44d7-8a28-7afd0e21490a",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    },
+    "0c76e562-f86c-416c-aabf-0dd613a3aee8": {
+      "ProjectGuid": "0c76e562-f86c-416c-aabf-0dd613a3aee8",
+      "DisplayName": "Domain",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

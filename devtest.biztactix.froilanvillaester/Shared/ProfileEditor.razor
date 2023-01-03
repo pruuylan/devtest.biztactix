@@ -1,0 +1,60 @@
+﻿@using Domain.Model
+
+<div class="form-field">
+    <div class="row">
+        <div class="col-md-2">
+            <label>First Name:</label>
+            <div>
+                <InputText @bind-Value="Profile.firstName" />
+                <ValidationMessage For="@(() => Profile.firstName)" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label>Last Name:</label>
+            <div>
+                <InputText @bind-Value="Profile.lastName"/>
+                <ValidationMessage For="@(() => Profile.lastName)" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-field">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Company:</label>
+            <div>
+                <InputText @bind-Value="Profile.companyName"/>
+                <ValidationMessage For="@(() => Profile.companyName)" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label>Email:</label>
+            <div>
+                <InputText @bind-Value="Profile.email"/>
+                <ValidationMessage For="@(() => Profile.email)" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-field">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Date of Birth:</label>
+            <div>
+                <InputDate @bind-Value="Profile.dateOfBirth"/>
+                <ValidationMessage For="@(() => Profile.dateOfBirth)" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label>Is First Login:</label>
+            <div>
+                <InputCheckbox @bind-Value="Profile.firstLogin"/>
+                <ValidationMessage For="@(() => Profile.firstLogin)" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public ProfileViewModel Profile { get; set; }
+}

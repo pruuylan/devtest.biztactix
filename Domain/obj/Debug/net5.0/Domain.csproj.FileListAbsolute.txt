@@ -1,0 +1,12 @@
+C:\Work\BIZTACTIX\Domain\bin\Debug\net5.0\Domain.deps.json
+C:\Work\BIZTACTIX\Domain\bin\Debug\net5.0\Domain.dll
+C:\Work\BIZTACTIX\Domain\bin\Debug\net5.0\ref\Domain.dll
+C:\Work\BIZTACTIX\Domain\bin\Debug\net5.0\Domain.pdb
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\Domain.dll
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\ref\Domain.dll
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\Domain.pdb
+C:\Work\BIZTACTIX\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
